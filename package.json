@@ -1,14 +1,37 @@
 {
-    "name": "app-service-hello-world",
-    "description": "Simple Hello World Node.js sample for Azure App Service",
-    "version": "0.0.1",
-    "private": true,
-    "license": "MIT",
-    "author": "Microsoft",
-    "engines": {
-        "node": ">=6.9.1"
-    },
-    "scripts": {
-        "start": "node index.js"
-    }
+  "name": "javscript_backend",
+  "version": "1.0.0",
+  "description": "#BlondieCode. JavaScript Практическое занятие. Back-end",
+  "main": "app.js",
+  "author": {
+    "name": "Aida Drogan",
+    "email": "aida.drogan.box@gmail.com",
+    "url": "https://www.youtube.com/channel/UCSsg9NLCse2XQCIRgfmJu3Q"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/droganaida/javascript-backend.git"
+  },
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development node --nouse-idle-notification --expose-gc app.js",
+    "pro": "cross-env NODE_ENV=production node --nouse-idle-notification --expose-gc app.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "async": "2.1.5",
+    "body-parser": "1.17.1",
+    "compression": "1.6.2",
+    "connect-mongo": "1.3.2",
+    "cross-env": "5.0.0",
+    "ejs": "2.5.6",
+    "express": "4.15.2",
+    "express-favicon": "2.0.0",
+    "express-session": "1.15.1",
+    "http": "0.0.0",
+    "imagemagick": "0.1.3",
+    "mongoose": "4.9.0",
+    "multer": "1.3.0",
+    "node-minify": "2.0.3",
+    "winston": "2.3.1"
+  }
 }

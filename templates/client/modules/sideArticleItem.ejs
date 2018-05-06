@@ -1,0 +1,19 @@
+<a href="/article/<%=article.alias%>">
+    <%  var image = "/images/noimage.jpg"
+    if (article.image){
+        image = article.image
+    }
+    image = image.substr(0, image.lastIndexOf('.')) + "-min" +
+            image.substr(image.lastIndexOf('.'))
+    %>
+    <img src="<%=image%>" alt="<%=article.title%>">
+    <div class="details">
+        <h2><%=article.title%></h2>
+        <%  var shortdescription = article.shortdescription
+        if (shortdescription.length > 100){
+            shortdescription = shortdescription.substr(0, 100) + "..."
+        }
+        %>
+        <p><%=shortdescription%></p>
+    </div>
+</a>

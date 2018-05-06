@@ -1,0 +1,26 @@
+<%-include ./dateParser%>
+<article>
+    <a href="/article/<%=article.alias%>">
+        <%  var image = "/images/noimage.jpg"
+            if (article.image){
+                image = article.image
+            }
+            image = image.substr(0, image.lastIndexOf('.')) + "-slide" +
+                image.substr(image.lastIndexOf('.'))
+        %>
+        <img src="<%=image%>" alt="<%=article.title%>">
+        <div class="details">
+            <h2><%=article.title%></h2>
+            <%  var shortdescription = article.shortdescription
+                if (shortdescription.length > 170){
+                    shortdescription = shortdescription.substr(0, 170) + "..."
+                }
+            %>
+            <p><%=shortdescription%></p>
+        </div>
+        <div class="secondary">
+            <span class="views"><%=article.views%></span>
+            <span class="date"><%=dateParser(article.moderated)%></span>
+        </div>
+    </a>
+</article>
