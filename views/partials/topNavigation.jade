@@ -1,0 +1,15 @@
+block topNavigation
+    nav.navbar.navbar-default(role='navigation')
+        ul.nav.navbar-nav
+            li
+                a(href='/') General
+            if user
+                li
+                    a(href='/chat') Chat
+        ul.nav.navbar-nav.navbar-right
+            if user
+                li
+                    a(href='', onclick="$('<form method=POST action=/logout>').appendTo('body').submit();return false") Log out
+            else
+                li
+                    a(href='/login') Log in
