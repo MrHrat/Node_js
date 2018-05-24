@@ -1,0 +1,58 @@
+extends layout
+
+block content    
+    h1= title
+    div.page-header
+        form.form-horizontal(name="add-user", method="post")
+            div.form-group
+                label.col-sm-2 Nick
+                div.col-sm-10
+                    input.form-control(
+                        type="text", 
+                        name="nick")
+            div.form-group
+                label.col-sm-2 Mail
+                div.col-sm-10
+                    input.form-control(
+                        type="email", 
+                        name="mail")
+            div.form-group
+                label.col-sm-2 Password
+                div.col-sm-10
+                    input.form-control(
+                        type="password", 
+                        name="password")
+            div.form-group
+                label.col-sm-2 Repeat password
+                div.col-sm-10
+                    input.form-control(
+                        type="password", 
+                        name="rpassword")
+            div.form-group
+                label.col-sm-2 Name
+                div.col-sm-10
+                    input.form-control(
+                        type="text", 
+                        name="name")
+            div.form-group
+                label.col-sm-2 Birth
+                div.col-sm-10
+                    input.form-control(
+                        type='date', 
+                        name='bday')
+            div.form-group
+                label.col-sm-2 Avatar
+                div.col-sm-10
+                    input#image_file(type='file', onchange='readURL(this);', name='image_file')
+                    img#blah(src='images/default/default-avatar.png', alt='your image')
+            div.form-group
+                label.col-sm-2 Experience
+                div.col-sm-10
+                    select.form-control(name='exp')
+                        option C++
+                        option C#
+                        option Python
+                        option Rubi
+                        option Node js
+            div.actions
+                input.btn.btn-primary(type="submit", value="register")

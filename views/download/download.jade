@@ -1,0 +1,33 @@
+doctype html
+html(lang='en')
+  head
+    title Express File Upload
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    link(rel='stylesheet', href='./styles/style.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+  body
+    .jumbotron
+      .container.text-center
+        h1 Express App File Uploads
+        p An example that uploads a user's file to your local server.
+        p
+          | Read more online at: 
+          a(href='https://medium.com/@Moonstrasse/how-to-make-a-basic-html-form-file-upload-using-multer-in-an-express-node-js-app-16dac2476610') Blog Post 
+    nav.navbar.navbar-inverse
+      .container-fluid
+        .navbar-header
+    .container.text-center
+      .col-sm-12
+        .form
+          h1 Upload a photo!
+          // IMAGE UPLOAD FORM
+          form(action='/upload', enctype='multipart/form-data', method='POST')
+            .section Note: Only image files are allowed.
+            .inner-wrap
+              label
+                input#photo(type='file', name='photo')
+              .button-section
+                input(type='submit', name='Upload', value='Upload Photo')
